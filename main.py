@@ -1,7 +1,7 @@
 import sqlite3
-from product import Product
-from category import Category
-from sale import Sale
+from src.modules.product import Product
+from src.modules.category import Category
+from src.modules.sale import Sale
 from datetime import date
 import pandas as pd
 from tabulate import tabulate
@@ -164,7 +164,7 @@ def showReports(conn):
 def main():
     try:
         # conexão com detecção de tipos
-        with sqlite3.connect('store.db',
+        with sqlite3.connect('src/database/store.db',
                             detect_types=sqlite3.PARSE_DECLTYPES) as conn:
             while(True):
                 print("-" * 100)

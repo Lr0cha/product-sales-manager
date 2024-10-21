@@ -1,5 +1,5 @@
 from datetime import date
-from product import Product
+from src.modules.product import Product
 class Sale:
     def __init__(self,quantity : int, total : float,product : Product) -> None:
 

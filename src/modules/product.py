@@ -1,4 +1,4 @@
-from category import Category
+from src.modules.category import Category
 class Product:
     def __init__(self, name : str, price : float, category : Category, _id = None) -> None:
         self._id = _id
