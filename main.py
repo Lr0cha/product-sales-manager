@@ -14,7 +14,7 @@ def adapt_date(d):
 def convert_date(date_string):
     return date.fromisoformat(date_string)
 
-# Registrar os adaptadores: informa ao SQLite como deve tratar o tipo date do Py.
+# Registrar os adaptadores: informa ao SQLite como tratar o tipo date do Py.
 sqlite3.register_adapter(date, adapt_date)
 sqlite3.register_converter("date", convert_date)
 
@@ -148,14 +148,14 @@ def showReports(conn):
             INNER JOIN products AS p ON p._id = s.id_product;
             """
     try:
-        df = pd.read_sql_query(sql, conn)
-        # Exibir o DataFrame formatado
+        df = pd.read_sql_query(sql, conn) # pegar dados correspondentes da query
+        # Exibir o DataFrame formatado com tabulate
         print(tabulate(df, headers='keys', tablefmt='pretty'))
         inputText = input("Deseja salvar a tabela como excel(s/n):")
-        if strInputIsValid(inputText):
+        if strInputIsValid(inputText): # se for um dado válido
             if(inputText.lower()[0] == 's'):
                 nameArq = input("Digite o nome do arquivo excel (ex: dados)")
-                df.to_excel(f"{nameArq}.xlsx")
+                df.to_excel(f"{nameArq}.xlsx") # salvar o excel
             else:
                 return
     except Exception as e:
@@ -177,7 +177,7 @@ def main():
                 [5] Sair do programa
                 ->>''', end="")
                 resp = intInputIsValid(input())
-                match resp:
+                match resp: #switch case
                     case 1:
                         catId = registerCategory(conn)
                         print(f"Categoria {catId} cadastrada com sucesso")
@@ -198,7 +198,6 @@ def main():
         print(f"Erro no banco de dados: {exc}")
 
 if __name__ == '__main__':
-    strInputIsValid("Cobra")
     main()
 
 
