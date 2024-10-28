@@ -19,8 +19,40 @@ Este projeto é um sistema de controle de produtos e vendas, desenvolvido em Pyt
   - `pandas`: Para manipulação e exportação de dados.
   - `tabulate`: Para formatação de tabelas exibidas no console.
 
+## Diagrama de Classes
+<p align="center">
+  <img src="src/images/diagramaClasses.png" alt="Diagrama de classes">
+</p>
+
 ## Modelagem de Dados
-![Modelagem lógica](src/images/ModelagemLogica.png)
+<p align="center">
+  <img src="src/images/ModelagemLogica.png" alt="Modelagem lógica">
+</p>
+
+#
+
+<details>
+  <summary><strong>Códigos</strong></summary>
+
+  <p align="center">
+    <img src="src/images/code1.png" alt="Diagrama de classes" width="800px"><br><br>
+    <img src="src/images/code2.png" alt="Diagrama de classes" width="800px"><br><br>
+    <img src="src/images/code3.png" alt="Diagrama de classes" width="800px"><br><br>
+  </p>
+</details>
+
+<details>
+  <summary><strong>Execução no terminal</strong></summary>
+
+  <p align="center">
+    <img src="src/images/output1.png" alt="Diagrama de classes" width="800px"><br><br>
+    <img src="src/images/output2.png" alt="Diagrama de classes" width="800px">
+  </p>
+</details>
+
+
+
+
 
 #
 Sinta-se à vontade para contribuir com melhorias ou adicionar novas funcionalidades!
